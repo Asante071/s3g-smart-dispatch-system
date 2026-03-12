@@ -65,14 +65,51 @@ Selects the most suitable engineer based on workload and SLA urgency.
 API Controller  
 Provides endpoints for dashboard communication.
 
-## Container Diagram
+## C4 Level 1 – System Context Diagram
 
 ```mermaid
 flowchart TD
 
-User --> Dashboard
-Dashboard --> BackendAPI
-BackendAPI --> SLAEngine
-BackendAPI --> DispatchEngine
-BackendAPI --> TicketDatabase
+Manager[IT Service Manager]
+Engineer[Field Service Engineer]
+
+Manager -->|Monitors Incidents| S3GSystem
+Engineer -->|Receives Dispatch Instructions| S3GSystem
+
+S3GSystem[S3G Smart Dispatch System]
+
+S3GSystem --> TicketDB[(Incident Ticket Database)]
+S3GSystem --> ITSMPlatform[IT Service Management Platform]
+```
+## C4 Level 2 – Container Diagram
+
+```mermaid
+flowchart TD
+
+User --> Dashboard[Frontend Dashboard]
+
+Dashboard --> API[Backend API]
+
+API --> SLAEngine[SLA Risk Engine]
+API --> DispatchEngine[Dispatch Recommendation Engine]
+
+API --> TicketDB[(Ticket Dataset)]
+```
+
+## C4 Level 3 – Component Diagram
+
+```mermaid
+flowchart TD
+
+APIController[API Controller]
+
+APIController --> TicketLoader
+APIController --> RiskEngine
+APIController --> DispatchEngine
+
+TicketLoader --> TicketDataset[(JSON Ticket Data)]
+
+RiskEngine --> SLAComputation
+DispatchEngine --> EngineerWorkloadAnalysis
+DispatchEngine --> EngineerRecommendation
 ```
