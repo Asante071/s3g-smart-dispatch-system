@@ -1,61 +1,93 @@
 # Use Case Specifications
 
 ## UC1: View Dashboard
-Actor: IT Service Manager
-Precondition: User is logged in
-Postcondition: Dashboard is displayed
+Actor: IT Service Manager  
+Description: Displays real-time ticket and SLA data  
+
+Preconditions:
+- User is authenticated  
+
+Postconditions:
+- Dashboard with updated data is displayed  
 
 Basic Flow:
-1. User logs in
-2. System displays dashboard
+1. User logs into system  
+2. System retrieves ticket data  
+3. System displays dashboard  
 
-Alternative:
-- If data fails → show error
+Alternative Flow:
+- If system fails → display error message  
 
 ---
 
 ## UC2: Log Ticket
-Actor: Service Desk Agent
-Precondition: System active
-Postcondition: Ticket created
+Actor: Service Desk Agent  
+Description: Capture new incident ticket  
+
+Preconditions:
+- System operational  
+
+Postconditions:
+- Ticket stored in system  
 
 Basic Flow:
-1. Enter issue details
-2. Submit ticket
+1. Agent enters ticket details  
+2. System validates input  
+3. Ticket is created  
 
 Alternative:
-- Missing fields → show validation error
+- Invalid input → error message  
 
 ---
 
 ## UC3: Calculate SLA
-Actor: System
-Precondition: Ticket exists
-Postcondition: SLA time calculated
+Actor: System  
+Description: Computes SLA remaining time  
+
+Preconditions:
+- Ticket exists  
+
+Postconditions:
+- SLA value updated  
 
 ---
 
 ## UC4: Recommend Engineer
-Actor: System
-Precondition: SLA calculated
-Postcondition: Engineer assigned
+Actor: System  
+Description: Suggest optimal engineer  
+
+Preconditions:
+- SLA calculated  
+
+Postconditions:
+- Engineer assigned  
 
 ---
 
 ## UC5: View Assigned Tasks
-Actor: Engineer
+Actor: Engineer  
+Description: View assigned tickets  
 
 ---
 
 ## UC6: Update Ticket
-Actor: Engineer
+Actor: Engineer  
+Description: Update ticket status  
 
 ---
 
 ## UC7: Generate Report
-Actor: Manager
+Actor: IT Service Manager  
+Description: Produce SLA performance report  
 
 ---
 
 ## UC8: Simulate Crisis
-Actor: Manager
+Actor: IT Service Manager  
+Description: Trigger high-risk scenario  
+
+Preconditions:
+- System running  
+
+Postconditions:
+- Ticket risks increase  

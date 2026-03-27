@@ -3,42 +3,51 @@
 ```mermaid
 flowchart TD
 
+%% Actors
 Manager[IT Service Manager]
 Engineer[Field Service Engineer]
 Agent[Service Desk Agent]
 Admin[IT Administrator]
 User[End User]
-System[Smart Dispatch System]
 
-Manager --> ViewDashboard
-Manager --> GenerateReports
+%% Use Cases
+UC1(View Dashboard)
+UC2(Log Ticket)
+UC3(Calculate SLA)
+UC4(Recommend Engineer)
+UC5(View Assigned Tasks)
+UC6(Update Ticket)
+UC7(Generate Report)
+UC8(Simulate Crisis)
 
-Agent --> LogTicket
-Agent --> MonitorTickets
+%% Relationships
+Manager --> UC1
+Manager --> UC7
+Manager --> UC8
 
-Engineer --> ViewAssignedTasks
-Engineer --> UpdateTicket
+Agent --> UC2
+Agent --> UC1
 
-Admin --> ManageSystem
+Engineer --> UC5
+Engineer --> UC6
 
-User --> ReportIssue
+Admin --> ManageSystem[Manage System]
 
-ViewDashboard --> CalculateSLA
-LogTicket --> CalculateSLA
-CalculateSLA --> RecommendEngineer
+User --> ReportIssue[Report Issue]
+
+%% Include relationships
+UC2 --> UC3
+UC3 --> UC4
+UC1 --> UC3
 ```
 
 ## Explanation
 
-Actors:
-- IT Service Manager: Monitors dashboard and generates reports
-- Field Engineer: Resolves assigned incidents
-- Service Desk Agent: Logs and monitors tickets
-- IT Administrator: Maintains system
-- End User: Reports issues
+The system consists of multiple actors interacting with core use cases.
 
-Relationships:
-- "Log Ticket" includes "Calculate SLA"
-- "Calculate SLA" leads to "Recommend Engineer"
+- The **Service Desk Agent** logs tickets, which includes SLA calculation.
+- The **SLA Calculation** use case triggers the **Engineer Recommendation** process.
+- The **IT Service Manager** monitors the system through the dashboard and can simulate crisis scenarios.
+- The **Engineer** interacts with assigned tasks and updates ticket progress.
 
-This ensures stakeholder concerns such as SLA monitoring and workload balancing are addressed.
+The inclusion relationships ensure automation of SLA tracking and intelligent dispatching, directly addressing stakeholder concerns such as reducing SLA breaches and improving workload distribution.
