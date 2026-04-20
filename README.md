@@ -23,3 +23,13 @@ Backend
 
 Data
 - JSON ticket simulation
+
+## Assignment 8 – System Behavior Modeling
+
+This section includes UML-based modeling of system behavior using state transition diagrams and activity workflows.
+
+### State Diagrams
+- [View State Diagrams](STATE_DIAGRAMS.md)
+
+### Activity Diagrams
+- [View Activity Diagrams](ACTIVITY_DIAGRAMS.md)

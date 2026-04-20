@@ -9,3 +9,4 @@ Another challenge was ensuring that tasks from previous assignments aligned with
 Comparing GitHub Projects with tools like Trello and Jira showed that GitHub provides strong integration with code management, although it has fewer advanced features.
 
 Overall, this assignment improved my understanding of Agile workflows and Kanban boards.
+
