@@ -33,3 +33,7 @@ This section includes UML-based modeling of system behavior using state transiti
 
 ### Activity Diagrams
 - [View Activity Diagrams](ACTIVITY_DIAGRAMS.md)
+
+ ## Assignment 9 - Domain modeling and Class Diagram
+ - [Domain model](DOMAIN_MODEL.md)
+ - [Class Diagram](CLASS_DIAGRAM.md)
