@@ -37,3 +37,17 @@ This section includes UML-based modeling of system behavior using state transiti
  ## Assignment 9 - Domain modeling and Class Diagram
  - [Domain model](DOMAIN_MODEL.md)
  - [Class Diagram](CLASS_DIAGRAM.md)
+
+ ## Assignment 10 – Implementation
+ 
+Language: Python
+ 
+Contents:
+- /src → Class implementations
+- /creational_patterns → Design patterns
+- /tests → Unit tests
+ 
+Design Choices:
+- Singleton used for database
+- Builder used for flexible object creation
+- Factory used for object instantiation
