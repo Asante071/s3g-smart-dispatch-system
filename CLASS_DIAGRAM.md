@@ -79,3 +79,26 @@ This design aligns with:
 - Functional Requirements (Assignment 4)
 - Use Cases (Assignment 5)
 - State Diagrams (Assignment 8)
+
+## Repository Layer
+
+```mermaid
+classDiagram
+
+class Repository {
++save(entity)
++find_by_id(id)
++find_all()
++delete(id)
+}
+
+class TicketRepository
+
+class InMemoryTicketRepository
+
+class DatabaseTicketRepository
+
+Repository <|-- TicketRepository
+TicketRepository <|-- InMemoryTicketRepository
+TicketRepository <|-- DatabaseTicketRepository
+```

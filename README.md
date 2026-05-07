@@ -51,3 +51,22 @@ Design Choices:
 - Singleton used for database
 - Builder used for flexible object creation
 - Factory used for object instantiation
+
+## Assignment 11 – Repository Layer
+
+This assignment implements a persistence repository layer using the Repository Pattern.
+
+### Features
+- Generic CRUD repository interface
+- In-memory repository implementation
+- Repository Factory for abstraction
+- Future-ready database repository stub
+- Unit tests for CRUD operations
+
+### Testing
+All repository tests were successfully executed using pytest.
+
+### Design Decisions
+- Factory Pattern used for storage abstraction
+- Repository Pattern separates persistence from business logic
+- In-memory storage used for fast testing and flexibility
