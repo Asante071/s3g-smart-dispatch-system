@@ -34,10 +34,9 @@ jobs:
           pip install httpx
 
       - name: Run tests
-        env:
-          PYTHONPATH: ${{ github.workspace }}
         run: |
-          pytest
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          python -m pytest
 
   release:
 
