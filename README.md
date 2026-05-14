@@ -70,3 +70,26 @@ All repository tests were successfully executed using pytest.
 - Factory Pattern used for storage abstraction
 - Repository Pattern separates persistence from business logic
 - In-memory storage used for fast testing and flexibility
+
+## Assignment 12 – Service Layer & REST API
+
+### Features
+- Service layer implementation
+- REST API using FastAPI
+- Swagger/OpenAPI documentation
+- Ticket API endpoints
+- Unit and API tests
+
+### Endpoints
+
+GET /api/tickets
+
+GET /api/tickets/{ticket_id}
+
+POST /api/tickets
+
+### Testing
+
+All tests executed successfully:
+
+7 passed
