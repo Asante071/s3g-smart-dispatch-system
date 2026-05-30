@@ -1,3 +1,13 @@
+![CI](https://github.com/Asante071/s3g-smart-dispatch-system/actions/workflows/ci.yml/badge.svg)
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green)
+
+![Tests](https://img.shields.io/badge/Tests-Pytest-success)
+
 # S³G Smart Dispatch System
 
 ## Overview
@@ -93,3 +103,26 @@ POST /api/tickets
 All tests executed successfully:
 
 7 passed
+
+# Features for Contribution
+
+| Feature Area | Description | Difficulty |
+|---|---|---|
+| API Enhancements | Add additional FastAPI endpoints | Medium |
+| SLA Monitoring | Improve SLA tracking and escalation | Medium |
+| Testing | Expand pytest coverage | Easy |
+| Documentation | Improve onboarding and setup docs | Easy |
+| Dashboard Analytics | Add SLA charts and metrics | Hard |
+| Notification System | Integrate email or Teams alerts | Medium |
+| Smart Dispatch Logic | Improve intelligent ticket assignment | Hard |
+
+# Project Structure
+
+```text
+api/                 -> FastAPI endpoints
+services/            -> Business logic layer
+repositories/        -> Repository pattern implementation
+src/                 -> Core domain models
+tests/               -> Automated tests
+.github/workflows/   -> CI/CD workflows
+Screenshots/         -> Assignment evidence screenshots
