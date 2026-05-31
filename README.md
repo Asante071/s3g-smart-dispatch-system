@@ -112,6 +112,7 @@ All tests executed successfully:
 | SLA Monitoring | Improve SLA tracking and escalation | Medium |
 | Testing | Expand pytest coverage | Easy |
 | Documentation | Improve onboarding and setup docs | Easy |
+| Swagger Examples | Add example responses and sample payloads | Easy |
 | Dashboard Analytics | Add SLA charts and metrics | Hard |
 | Notification System | Integrate email or Teams alerts | Medium |
 | Smart Dispatch Logic | Improve intelligent ticket assignment | Hard |
