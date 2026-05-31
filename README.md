@@ -20,6 +20,25 @@ The system analyses incident ticket data, monitors SLA countdowns and visualizes
 - [System Specification](SPECIFICATION.md)
 - [System Architecture](ARCHITECTURE.md)
 
+## Getting Started
+
+### Prerequisites
+- Python 3.14+
+- pip
+
+### Installation
+```bash
+git clone https://github.com/Asante071/s3g-smart-dispatch-system.git
+cd s3g-smart-dispatch-system
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### Troubleshooting
+- If `pip install` fails, ensure your Python version matches the prerequisite and try `pip install --upgrade pip` first.
+- On Windows, use `venv\Scripts\activate` instead of `source venv/bin/activate`.
+
 ## Proposed Technologies
 
 Frontend
