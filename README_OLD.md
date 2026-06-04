@@ -1,0 +1,129 @@
+![CI](https://github.com/Asante071/s3g-smart-dispatch-system/actions/workflows/ci.yml/badge.svg)
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green)
+
+![Tests](https://img.shields.io/badge/Tests-Pytest-success)
+
+# S³G Smart Dispatch System
+
+## Overview
+The S³G Smart Dispatch System is an AI-driven IT service monitoring platform designed to predict Service Level Agreement (SLA) breach risks and recommend the best field service engineer for resolving incidents.
+
+The system analyses incident ticket data, monitors SLA countdowns and visualizes operational insights through a real-time dashboard.
+
+## Project Documents
+
+- [System Specification](docs/SPECIFICATION.md)
+- [System Architecture](docs/ARCHITECTURE.md)
+
+## Proposed Technologies
+
+Frontend
+- HTML
+- CSS
+- JavaScript
+- Chart.js
+
+Backend
+- Python (Flask)
+
+Data
+- JSON ticket simulation
+
+## Assignment 8 – System Behavior Modeling
+
+This section includes UML-based modeling of system behavior using state transition diagrams and activity workflows.
+
+### State Diagrams
+- [View State Diagrams](docs/STATE_DIAGRAMS.md)
+
+### Activity Diagrams
+- [View Activity Diagrams](docs/ACTIVITY_DIAGRAMS.md)
+
+- [Domain model](docs/DOMAIN_MODEL.md)
+- [Class Diagram](docs/CLASS_DIAGRAM.md)
+
+ ## Assignment 10 – Implementation
+ 
+Language: Python
+ 
+Contents:
+- /src → Class implementations
+- /creational_patterns → Design patterns
+- /tests → Unit tests
+ 
+Design Choices:
+- Singleton used for database
+- Builder used for flexible object creation
+- Factory used for object instantiation
+
+## Assignment 11 – Repository Layer
+
+This assignment implements a persistence repository layer using the Repository Pattern.
+
+### Features
+- Generic CRUD repository interface
+- In-memory repository implementation
+- Repository Factory for abstraction
+- Future-ready database repository stub
+- Unit tests for CRUD operations
+
+### Testing
+All repository tests were successfully executed using pytest.
+
+### Design Decisions
+- Factory Pattern used for storage abstraction
+- Repository Pattern separates persistence from business logic
+- In-memory storage used for fast testing and flexibility
+
+## Assignment 12 – Service Layer & REST API
+
+### Features
+- Service layer implementation
+- REST API using FastAPI
+- Swagger/OpenAPI documentation
+- Ticket API endpoints
+- Unit and API tests
+
+### Endpoints
+
+GET /api/tickets
+
+GET /api/tickets/{ticket_id}
+
+POST /api/tickets
+
+### Testing
+
+All tests executed successfully:
+
+7 passed
+
+# Features for Contribution
+
+| Feature Area | Description | Difficulty |
+|---|---|---|
+| API Enhancements | Add additional FastAPI endpoints | Medium |
+| SLA Monitoring | Improve SLA tracking and escalation | Medium |
+| Testing | Expand pytest coverage | Easy |
+| Documentation | Improve onboarding and setup docs | Easy |
+| Dashboard Analytics | Add SLA charts and metrics | Hard |
+| Notification System | Integrate email or Teams alerts | Medium |
+| Smart Dispatch Logic | Improve intelligent ticket assignment | Hard |
+
+# Project Structure
+
+```text
+api/                 -> FastAPI endpoints
+services/            -> Business logic layer
+repositories/        -> Repository pattern implementation
+src/                 -> Core domain models
+tests/               -> Automated tests
+.github/workflows/   -> CI/CD workflows
+Screenshots/         -> Assignment evidence screenshots
+
+Latest workflow validation completed.
