@@ -13,14 +13,13 @@ def test_get_ticket():
     response = client.get("/api/tickets/1")
     assert response.status_code == 200
 
-
 def test_create_ticket():
     response = client.post(
         "/api/tickets",
         json={
             "id": 1,
             "title": "Network issue",
-            "priority": "High"
+            "priority": "HIGH"
         }
     )
     assert response.status_code == 200
