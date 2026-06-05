@@ -180,6 +180,7 @@ uvicorn api.app:app --reload
 | Testing | Expand pytest coverage | Easy |
 | API Response Validation | Add invalid input tests and status code verification | Easy |
 | Documentation | Improve onboarding and setup docs | Easy |
+| Swagger Examples | Add example responses and sample payloads | Easy |
 | Dashboard Analytics | Add SLA charts and metrics | Hard |
 | Notification System | Integrate email or Teams alerts | Medium |
 | Smart Dispatch Logic | Improve intelligent ticket assignment | Hard |
