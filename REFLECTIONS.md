@@ -79,3 +79,26 @@ Another challenge involved designing documentation that would be understandable 
 This assignment also taught me the importance of community engagement in open-source projects. Features such as repository stars, forks, pull requests, issue tracking, and peer collaboration help improve software quality and encourage teamwork. Open-source collaboration is not only about writing code but also about communication, documentation, testing, and project management.
 
 Overall, this assignment helped me develop practical software engineering and DevOps skills while exposing me to real-world GitHub collaboration practices. I gained valuable experience in repository management, contributor onboarding, CI/CD automation, issue tracking, and collaborative development workflows.
+
+
+## Last Open Source Contributions
+
+For this task, I contributed to three open-source software engineering projects by submitting documentation-focused pull requests.
+
+The first contribution was made to the Access-Learn project, where I improved the README file by adding project badges. This enhancement improves the presentation of the repository and makes important project information visible at a glance.
+
+The second contribution was made to the Finance-Management-System project. I improved the contributor documentation by adding branch naming conventions, contribution workflow guidance, and best practices for contributors. These additions help standardize collaboration and improve onboarding for future contributors.
+
+The third contribution was made to the AI-Adaptive-Learning-System project. I enhanced the roadmap documentation by proposing future development goals related to personalized learning dashboards, AI-powered recommendations, student progress tracking, and real-time performance insights.
+
+Through these contributions, I gained practical experience with:
+
+* Forking repositories
+* Creating feature branches
+* Making documentation improvements
+* Creating commits with meaningful messages
+* Pushing changes to GitHub
+* Creating pull requests
+* Collaborating within open-source workflows
+
+This assignment reinforced the importance of documentation, collaboration, version control, and contribution workflows in modern software engineering projects.

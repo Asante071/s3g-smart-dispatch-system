@@ -1,0 +1,14 @@
+* [33mc1ff662[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Enhance API documentation and improve Swagger UI
+[31m|[m * [33m3be21df[m[33m ([m[1;33mtag: [m[1;33mv1.0.0[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #27 from YuuGR1337/fix/issue-18
+[31m|[m[31m/[m[33m|[m 
+[31m|[m * [33m13c2d41[m docs: add additional api response validation tests
+* [33m|[m [33m55dfacc[m Project refinements
+[33m|[m[33m/[m  
+* [33m5f8675c[m Fix API tests and dependencies
+* [33m0283c75[m Trigger successful workflow on main
+*   [33m1c3b09f[m Merge pull request #16 from Asante071/test-pr
+[34m|[m[35m\[m  
+* [35m|[m [33mc8a1975[m Add MIT License to the project
+[35m|[m [35m|[m * [33m2dc2a1b[m[33m ([m[1;31morigin/test-pr[m[33m, [m[1;32mtest-pr[m[33m)[m Finalize Assignment 14 repository and reflections
+[35m|[m [35m|[m[35m/[m  
+[35m|[m * [33m3df9e2b[m Finalize Assignment 14 repository and reflections

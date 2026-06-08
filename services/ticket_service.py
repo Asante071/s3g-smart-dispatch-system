@@ -1,9 +1,42 @@
 from repositories.inmemory.inmemory_ticket_repository import InMemoryTicketRepository
+from src.ticket import Ticket
 
 class TicketService:
 
     def __init__(self):
+
         self.repo = InMemoryTicketRepository()
+
+        # Demo Data
+        self.repo.save(
+            Ticket(
+                1,
+                "VPN Connection Failure",
+                "HIGH",
+                2,
+                "OPEN"
+            )
+        )
+
+        self.repo.save(
+            Ticket(
+                2,
+                "Email Outage",
+                "AMBER",
+                4,
+                "IN_PROGRESS"
+            )
+        )
+
+        self.repo.save(
+            Ticket(
+                3,
+                "Printer Offline",
+                "LOW",
+                8,
+                "OPEN"
+            )
+        )
 
     def create_ticket(self, ticket):
 

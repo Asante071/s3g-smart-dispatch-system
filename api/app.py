@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-
+from fastapi.middleware.cors import CORSMiddleware
 from services.ticket_service import TicketService
 from src.ticket import Ticket
+
 
 app = FastAPI(
     title="S³G Smart Dispatch System",
@@ -35,6 +36,13 @@ The S³G Smart Dispatch System provides:
     license_info={
         "name": "MIT License"
     }
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 ticket_service = TicketService()

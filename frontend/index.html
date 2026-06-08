@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S³G Smart Dispatch System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>S³G</h2>
+
+    <ul>
+        <li>Dashboard</li>
+        <li>Tickets</li>
+        <li>Analytics</li>
+        <li>Engineers</li>
+    </ul>
+
+</div>
+
+<div class="main-content">
+
+    <header>
+        <h1>S³G Smart Dispatch Dashboard</h1>
+        <p>Intelligent IT Service Management Platform</p>
+    </header>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Open Tickets</h3>
+            <p id="ticketCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Critical Tickets</h3>
+            <p>3</p>
+        </div>
+
+        <div class="card">
+            <h3>SLA Breaches</h3>
+            <p>1</p>
+        </div>
+
+        <div class="card">
+            <h3>Engineers Active</h3>
+            <p>5</p>
+        </div>
+
+    </div>
+
+    <div class="chart-container">
+        <canvas id="ticketChart"></canvas>
+    </div>
+
+    <div class="ticket-table">
+
+        <h2>Recent Incidents</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Issue</th>
+                    <th>Risk</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="ticketBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

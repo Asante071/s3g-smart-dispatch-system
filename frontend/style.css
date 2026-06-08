@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: white;
+    display: flex;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 220px;
+    background: #111827;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 14px;
+    margin-bottom: 12px;
+    background: #1f2937;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: #2563eb;
+}
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: #0f172a;
+}
+
+/* Header */
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+header p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* KPI Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #cbd5e1;
+}
+
+.card p {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Chart */
+
+.chart-container {
+    background: #1e293b;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    height: 400px;
+}
+
+/* Table */
+
+.ticket-table {
+    background: #1e293b;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.ticket-table h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #334155;
+    color: white;
+}
+
+td {
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #293548;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
