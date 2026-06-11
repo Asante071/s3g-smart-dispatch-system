@@ -10,32 +10,35 @@ class TicketService:
         # Demo Data
         self.repo.save(
             Ticket(
-                1,
-                "VPN Connection Failure",
-                "HIGH",
-                2,
-                "OPEN"
-            )
+    1,
+    "VPN Connection Failure",
+    "HIGH",
+    2,
+    "OPEN",
+    "Sarah"
+)
         )
 
         self.repo.save(
-            Ticket(
-                2,
-                "Email Outage",
-                "AMBER",
-                4,
-                "IN_PROGRESS"
-            )
+    Ticket(
+    2,
+    "Email Outage",
+    "AMBER",
+    4,
+    "IN_PROGRESS",
+    "David"
+)
         )
 
         self.repo.save(
-            Ticket(
-                3,
-                "Printer Offline",
-                "LOW",
-                8,
-                "OPEN"
-            )
+Ticket(
+    3,
+    "Printer Offline",
+    "LOW",
+    8,
+    "OPEN",
+    "Mike"
+)
         )
 
     def create_ticket(self, ticket):
@@ -54,3 +57,15 @@ class TicketService:
 
     def get_ticket(self, id):
         return self.repo.find_by_id(id)
+    
+    def process_sla_countdown(self):
+
+     tickets = self.repo.find_all()
+
+     for ticket in tickets:
+
+        if ticket.status != "CLOSED":
+
+            if ticket.sla_remaining > 0:
+
+                ticket.sla_remaining -= 1

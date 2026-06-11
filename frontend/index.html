@@ -1,89 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>S³G Smart Dispatch System</title>
 
     <link rel="stylesheet" href="style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body>
 
-<div class="sidebar">
+    <div class="sidebar">
 
-    <h2>S³G</h2>
+        <h2>S³G</h2>
 
-    <ul>
-        <li>Dashboard</li>
-        <li>Tickets</li>
-        <li>Analytics</li>
-        <li>Engineers</li>
-    </ul>
+        <ul>
+            <li>Dashboard</li>
+            <li>Tickets</li>
+            <li>Analytics</li>
+            <li>Engineers</li>
+        </ul>
+
+    </div>
+
+    <div class="main-content">
+
+        <header>
+
+            <h1>S³G Smart Dispatch Dashboard</h1>
+
+            <p>
+                Intelligent IT Service Management Platform
+            </p>
+
+        </header>
+
+        <!-- KPI CARDS -->
+
+        <div class="cards">
+           
+             <div class="card">
+
+                <h3>Open Tickets</h3>
+
+                <p id="ticketCount">0</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Critical Tickets</h3>
+
+                <p id="criticalCount">0</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>SLA Breaches</h3>
+
+                <p id="breachCount">0</p>
+
+            </div>
+
+       <div class="card">
+                <h3>Engineers Active</h3>
+                <p id="engineerCount">0</p>
+        </div>
+
+        </div>
+
+        <!-- CREATE TICKET -->
+
+       <div class="ticket-form">
+
+    <h3>Create New Ticket</h3>
+
+    <input
+        type="number"
+        id="idInput"
+        placeholder="Ticket ID"
+    >
+
+    <input
+        type="text"
+        id="issueInput"
+        placeholder="Issue Description"
+    >
+
+    <select id="riskInput">
+
+        <option value="LOW">LOW</option>
+
+        <option value="AMBER">MODERATE</option>
+
+        <option value="HIGH">HIGH</option>
+
+    </select>
+
+    <button onclick="createTicket()">
+        Create Ticket
+    </button>
+
+</div>
+<div class="action-bar">
+
+    <button
+        onclick="processSLA()"
+        class="sla-btn"
+    >
+        Process SLA Countdown
+    </button>
 
 </div>
 
-<div class="main-content">
+        <!-- CHARTS -->
 
-    <header>
-        <h1>S³G Smart Dispatch Dashboard</h1>
-        <p>Intelligent IT Service Management Platform</p>
-    </header>
+        <div class="charts-wrapper">
 
-    <div class="cards">
+            <div class="chart-container">
 
-        <div class="card">
-            <h3>Open Tickets</h3>
-            <p id="ticketCount">0</p>
+                <canvas id="ticketChart"></canvas>
+
+            </div>
+
+            <div class="chart-container">
+
+                <canvas id="riskPieChart"></canvas>
+
+            </div>
+
+        </div>
+        <div class="chart-container">
+              <canvas id="engineerChart"></canvas>
         </div>
 
-        <div class="card">
-            <h3>Critical Tickets</h3>
-            <p>3</p>
+        <!-- API STATUS -->
+
+        <div class="api-status">
+
+            <span id="apiIndicator">
+                🟢 API Online
+            </span>
+
+            <span id="lastUpdated">
+                Last Updated: --
+            </span>
+
         </div>
 
-        <div class="card">
-            <h3>SLA Breaches</h3>
-            <p>1</p>
+        <!-- RECENT ACTIVITY -->
+
+        <div class="activity-panel">
+
+            <h3>Recent Activity</h3>
+
+            <ul id="activityList">
+
+                <li>System Started</li>
+
+            </ul>
+
         </div>
 
-        <div class="card">
-            <h3>Engineers Active</h3>
-            <p>5</p>
+        <!-- INCIDENT TABLE -->
+
+        <div class="ticket-table">
+
+            <h2>Recent Incidents</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Issue</th>
+
+                        <th>Risk</th>
+
+                        <th>SLA Remaining</th>
+
+                        <th>Status</th>
+
+                        <th>Engineer</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="ticketBody">
+
+                </tbody>
+
+            </table>
+
         </div>
 
     </div>
 
-    <div class="chart-container">
-        <canvas id="ticketChart"></canvas>
-    </div>
-
-    <div class="ticket-table">
-
-        <h2>Recent Incidents</h2>
-
-        <table>
-
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Issue</th>
-                    <th>Risk</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-
-            <tbody id="ticketBody">
-            </tbody>
-
-        </table>
-
-    </div>
-
-</div>
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
+
 </html>

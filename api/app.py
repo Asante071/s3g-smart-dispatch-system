@@ -52,6 +52,7 @@ class TicketRequest(BaseModel):
     id: int
     title: str
     priority: str
+    
 
     model_config = {
         "json_schema_extra": {
@@ -62,6 +63,12 @@ class TicketRequest(BaseModel):
             }
         }
     }
+
+class StatusUpdateRequest(BaseModel):
+       status: str
+
+class EngineerAssignmentRequest(BaseModel):
+    engineer: str
 
 
 @app.get(
@@ -101,3 +108,52 @@ def create_ticket(ticket_request: TicketRequest):
     )
 
     return ticket_service.create_ticket(ticket)
+@app.put("/api/tickets/{ticket_id}/status")
+def update_ticket_status(
+    ticket_id: int,
+    request: StatusUpdateRequest
+):
+
+    ticket = ticket_service.get_ticket(ticket_id)
+
+    if ticket is None:
+        return {
+            "error": "Ticket not found"
+        }
+
+    ticket.update_status(request.status)
+
+    return ticket
+
+@app.put(
+    "/api/tickets/{ticket_id}/assign"
+)
+def assign_engineer(
+    ticket_id: int,
+    request: EngineerAssignmentRequest
+):
+
+    ticket = ticket_service.get_ticket(
+        ticket_id
+    )
+
+    if ticket is None:
+
+        return {
+            "error":
+            "Ticket not found"
+        }
+
+    ticket.assign_engineer(
+        request.engineer
+    )
+
+    return ticket
+@app.post("/api/process-sla")
+def process_sla():
+
+    ticket_service.process_sla_countdown()
+
+    return {
+        "message": "SLA countdown processed"
+    }

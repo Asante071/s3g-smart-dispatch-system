@@ -158,3 +158,301 @@ tr:nth-child(even) {
     }
 
 }
+.high {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.amber {
+    background: #f59e0b;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.low {
+    background: #22c55e;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.sla-critical{
+    background:#dc2626;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.sla-warning{
+    background:#f59e0b;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.sla-safe{
+    background:#22c55e;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-weight:bold;
+}
+.charts-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.chart-container {
+    flex: 1;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    height: 400px;
+}
+.activity-panel {
+
+    margin-top: 20px;
+
+    background: #1e293b;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+}
+
+.activity-panel h3 {
+
+    margin-top: 0;
+
+    color: white;
+
+}
+
+.activity-panel ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.activity-panel li {
+
+    padding: 12px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+.api-status {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    padding: 12px;
+
+    background: #0f172a;
+
+    border-radius: 10px;
+
+    color: white;
+
+}
+.ticket-form {
+
+    background: #1e293b;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+.ticket-form h3 {
+
+    width: 100%;
+
+    margin: 0;
+
+    color: white;
+
+}
+
+.ticket-form input {
+
+    flex: 1;
+
+    min-width: 300px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0f172a;
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+.ticket-form select {
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0f172a;
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+.ticket-form button {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+.ticket-form button:hover {
+
+    background: #1d4ed8;
+
+}
+.status-select {
+
+    background: #0f172a;
+
+    color: white;
+
+    border: 1px solid #334155;
+
+    border-radius: 8px;
+
+    padding: 8px;
+
+    font-weight: bold;
+
+}
+.engineer-select {
+
+    background: #0f172a;
+
+    color: white;
+
+    border: 1px solid #334155;
+
+    border-radius: 8px;
+
+    padding: 8px 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+.action-bar {
+
+    margin-top: 20px;
+
+}
+
+.sla-btn {
+
+    background: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+.action-bar {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.sla-btn {
+
+    background: #dc2626;
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.sla-btn:hover {
+
+    background: #b91c1c;
+
+}
