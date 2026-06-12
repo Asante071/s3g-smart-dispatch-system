@@ -1,4 +1,4 @@
-# Assignment 13 — CI/CD Workflow and Branch Protection Report
+# CI/CD Workflow and Branch Protection Report
 
 ## Overview
 This assignment implemented a CI/CD workflow using GitHub Actions for the S³G Smart Dispatch System project.
